@@ -183,15 +183,16 @@ apps:
         consumers:
           - Any
           
-      # - name: "garmin-backend"
-      #   services:
-      #     - https
-      #     - MS-SQL-Server
-      #   scope:
-      #     - net_garmin_app
-      #   consumers:
-      #     - net_garmin_web
-      #     # - NonSense
+      - name: "audi-backend"
+        services:
+          - https
+          - MS-SQL-Server
+          - dns
+        scope:
+          - net_audi_db
+        consumers:
+          - net_audi_web
+   
 
   # - name: expense
   #   services:
